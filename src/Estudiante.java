@@ -59,8 +59,13 @@ public class Estudiante implements Comparable<Estudiante> {
 
     @Override
     public String toString() {
-        return "Estudiante{" + "codigo=" + codigo + ", nombre=" + nombre + ", edad=" + edad 
-        + ", nota=" + nota + ", carrera=" + carrera + '}';
+        return "Estudiante{" + "codigo:" + codigo + ", nombre:" + nombre + ", edad:" + edad 
+        + ", nota:" + nota + ", carrera:" + carrera + '}';
+    }
+
+    @Override
+    public int compareTo(Estudiante otro) {
+        return this.codigo.compareTo(otro.codigo);
     }
 
 }
